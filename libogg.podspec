@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
                    Needed for decoding or encoding of Ogg Theora video and Vorbis audio.
                    DESC
 
-  s.homepage     = "https://xiph.org/" + name + "/"
+  s.homepage     = "https://xiph.org/ogg/"
 
   s.license      = { :type => "BSD", :file => "ogg/COPYING" }
 
@@ -18,7 +18,8 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "6.0"
 
   s.source       = { :git => "https://github.com/ypopovych/ogg-ios.git",
-                     :tag => s.version }
+                     :tag => s.version,
+                     :submodules => true }
 
   s.compiler_flags = "-O3",
                      "-Wno-conversion"
@@ -28,7 +29,9 @@ Pod::Spec.new do |s|
   s.source_files = "ogg/src",
                    "ogg/include/**/*.h",
                    "config.h"
+        
   s.public_header_files = "ogg/include/**/*.h", "config.h"
+  
   s.header_dir = "ogg"
 end
 
