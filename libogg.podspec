@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "6.0"
 
-  s.source       = { :git => "https://github.com/ypopovych/ogg-ios.git",
+  s.source       = { :git => "https://github.com/evature/ogg-ios.git",
                      :tag => s.version,
                      :submodules => true }
 
